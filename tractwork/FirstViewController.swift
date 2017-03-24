@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FirstViewController: UIViewController {
+  
+  @IBOutlet weak var workdayCountLabel: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let workday = Workday().retrieveTodaysWorkday()
+    
+    workdayCountLabel.text = "Number of Workdays \(Workday().getNumberOfWorkdays())"
     // Do any additional setup after loading the view, typically from a nib.
   }
 

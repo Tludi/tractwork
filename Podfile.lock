@@ -1,0 +1,20 @@
+PODS:
+  - PDFGenerator (2.0.1)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+
+DEPENDENCIES:
+  - PDFGenerator (~> 2.0)
+  - RealmSwift (~> 2.4)
+
+SPEC CHECKSUMS:
+  PDFGenerator: 69cf0787767d501a10b6b85492b1f27fd23b00e8
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+
+PODFILE CHECKSUM: 8ec0cabce8908fce23bc9658976c306bd83e68e9
+
+COCOAPODS: 1.2.0
