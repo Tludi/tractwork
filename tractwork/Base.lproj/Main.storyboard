@@ -22,43 +22,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="99" y="313" width="177" height="42"/>
+                                <rect key="frame" x="99" y="461" width="177" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="90" y="363" width="195" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TO-ca-RWN">
+                                <rect key="frame" x="164" y="540" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clearWorkdaysButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7wA-lh-bDy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tractwork" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpZ-qu-RCv">
+                                <rect key="frame" x="130" y="28" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HRt-ys-CMi"/>
+                                    <constraint firstAttribute="width" constant="113" id="iJk-pm-y3X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.011833599768579006" green="0.72529429197311401" blue="0.75783920288085938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WorkdayCountLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVV-bg-xcW">
-                                <rect key="frame" x="110" y="158" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-9t-1fV">
+                                <rect key="frame" x="165" y="57" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WorkdayCountLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVV-bg-xcW">
+                                <rect key="frame" x="110" y="511" width="155" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-9I-o0z">
+                                <rect key="frame" x="0.0" y="86" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.01183359977" green="0.72529429199999995" blue="0.75783920289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="X3A-Ag-2Id" kind="embed" id="l2Q-FU-Oty"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YVV-bg-xcW" firstAttribute="centerX" secondItem="TmF-9I-o0z" secondAttribute="centerX" id="3Pi-8q-zAW"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="YVV-bg-xcW" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="GgU-3L-b63"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="YVV-bg-xcW" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="138" id="s9U-em-6oE"/>
+                            <constraint firstItem="YVV-bg-xcW" firstAttribute="centerX" secondItem="3TO-ca-RWN" secondAttribute="centerX" id="6Qs-Nq-YG2"/>
+                            <constraint firstItem="MRO-9t-1fV" firstAttribute="top" secondItem="tpZ-qu-RCv" secondAttribute="bottom" constant="8" symbolic="YES" id="H6Y-DS-HN2"/>
+                            <constraint firstItem="3TO-ca-RWN" firstAttribute="top" secondItem="YVV-bg-xcW" secondAttribute="bottom" constant="8" symbolic="YES" id="KKz-7J-Fs7"/>
+                            <constraint firstItem="tpZ-qu-RCv" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="KOR-qm-pAB"/>
+                            <constraint firstItem="TmF-9I-o0z" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="NvL-XD-E4R"/>
+                            <constraint firstItem="TmF-9I-o0z" firstAttribute="top" secondItem="MRO-9t-1fV" secondAttribute="bottom" constant="8" symbolic="YES" id="Ob6-CQ-ElP"/>
+                            <constraint firstItem="MRO-9t-1fV" firstAttribute="centerX" secondItem="tpZ-qu-RCv" secondAttribute="centerX" id="RZM-os-TqK"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="3TO-ca-RWN" secondAttribute="bottom" constant="48" id="Ui3-Uz-5mf"/>
+                            <constraint firstItem="tpZ-qu-RCv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="-1" id="eO7-zi-TNk"/>
+                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="-148.5" id="exm-UA-ej4"/>
+                            <constraint firstItem="TmF-9I-o0z" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="gbh-aa-YFO"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="TmF-9I-o0z" secondAttribute="bottom" constant="75" id="oZR-oh-QMP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="todayLabel" destination="MRO-9t-1fV" id="5bi-Ch-hF5"/>
                         <outlet property="workdayCountLabel" destination="YVV-bg-xcW" id="8iL-32-DPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -118,6 +151,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vug-RQ-iys">
+            <objects>
+                <viewController id="X3A-Ag-2Id" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SdP-xH-Qq9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJw-oe-nkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

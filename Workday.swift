@@ -107,15 +107,18 @@ extension Workday {
     
     
     // check if there are any workdays
-    if workdays.count > 0 {
-      //      let todaysDate = Date()
-      
+//    if workdays.count > 0 {
+    
       // If there are workdays, check if there is a workday for today
       for wday in workdays {
         print("there are workdays")
         print("\(wday.dayDate) - Date")
+        
+        // TODO: sort workdays with newest first then break if statement when
+        // One is found so app does not continue to waste
         if wday.dayDate.compare(.isToday) {
           workday = wday
+          break
         }
         // Go through each workday and compare it to todays Date
         // If existing date is found, break loop and return that day to app
@@ -123,19 +126,50 @@ extension Workday {
         // Can the search start with the latest entry?
       }
       
+      if workday.id == "" {
+        print("id is empty")
+        workday = createNewWorkday()
+      }
+      return workday
+      
       // If there are no workdays or not a workday for today, create new workday
-    } else {
-      print("there are no workdays in the database")
-      createNewWorkday()
-    }
-    
-    
-    return workday
+//    } else {
+//      print("there are no workdays in the database")
+//      workday = createNewWorkday()
+//    }
+//    return workday
   }
   
+//  func checkIfWorkdayExists() -> Bool {
+//    let workdays = try! Realm().objects(Workday.self)
+//    for wday in workdays {
+//      print("there are workdays")
+//      print("\(wday.dayDate) - Date")
+//      
+//      // TODO: sort workdays with newest first then break if statement when
+//      // One is found so app does not continue to waste
+//      if wday.dayDate.compare(.isToday) {
+////        workday = wday
+//        return true
+//        break
+//      } else {
+//        return false
+//      }
+//
+//    }
+//  }
   
-  
-  func createNewWorkday() {
+  func createNewWorkday() -> Workday {
+    // Is there a need to check if workday with todays date exists?
+    // Only if calling this function without already checking
     print("Hit createNewWorkday function")
+    let realm = try! Realm()
+    let newWorkday = Workday()
+    try! realm.write {
+      newWorkday.id = NSUUID().uuidString
+      newWorkday.dayDate = Date()
+      realm.add(newWorkday)
+    }
+    return newWorkday
   }
 }
