@@ -45,8 +45,11 @@ class FirstViewController: UIViewController {
   }
   
   func getWorkday() -> Workday {
-    let workday = realm.objects(Workday.self).last
-    return workday!
+    if let workday = realm.objects(Workday.self).first {
+      return workday
+    } else {
+      return newWorkday()
+    }
   }
   
   func newWorkday() -> Workday {
