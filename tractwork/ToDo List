@@ -11,3 +11,9 @@
 - Determine the look of the second view - Timepunches for the day or show days first?
 - Determine what to show on the bottom of the first view. Latest punch or punches?
 - How to add a second punch to the timePunchPair
+
+- Create branch for versioning and smaller branches for work. Do not work on master.
+
+- import images for first page
+- rename first page to rootView
+
