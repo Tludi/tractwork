@@ -48,23 +48,23 @@ class Workday: Object {
   
 }
 
-class TimePunchPair: Object {
-  dynamic var firstTimePunch: TimePunch?
-  dynamic var secondTimePunch: TimePunch?
-}
-
-
-class TimePunch: Object {
-  dynamic var id = ""
-  dynamic var punchTime = Date()
-  dynamic var status = false
-  
-  override static func primaryKey() -> String? {
-    return "id"
-  }
-  
-  var timePunchWorkday = LinkingObjects(fromType: Workday.self, property: "timePunches")
-}
+//class TimePunchPair: Object {
+//  dynamic var firstTimePunch: TimePunch?
+//  dynamic var secondTimePunch: TimePunch?
+//}
+//
+//
+//class TimePunch: Object {
+//  dynamic var id = ""
+//  dynamic var punchTime = Date()
+//  dynamic var status = false
+//  
+//  override static func primaryKey() -> String? {
+//    return "id"
+//  }
+//  
+//  var timePunchWorkday = LinkingObjects(fromType: Workday.self, property: "timePunches")
+//}
 
 
 // Objects to include later

@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
       for punch in timepunches {
         print("\(punch.firstTimePunch)")
         print("\(punch.secondTimePunch)")
+        print("Time Punch difference is: \(punch.punchDifference)")
 
       }
     } else {

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FirstViewController: UIViewController {
+class RootViewController: UIViewController {
   let realm = try! Realm()
   var todaysWorkday = Workday()
   

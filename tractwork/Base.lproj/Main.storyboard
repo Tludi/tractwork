@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Root-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="tractwork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="RootViewController" customModule="tractwork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -60,9 +60,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-9I-o0z">
                                 <rect key="frame" x="0.0" y="86" width="375" height="300"/>
                                 <color key="backgroundColor" red="0.01183359977" green="0.72529429199999995" blue="0.75783920289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="X3A-Ag-2Id" kind="embed" id="l2Q-FU-Oty"/>
-                                </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoD-XT-K3t">
                                 <rect key="frame" x="138" y="221" width="96" height="30"/>
@@ -95,7 +92,7 @@
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="TmF-9I-o0z" secondAttribute="bottom" constant="75" id="oZR-oh-QMP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Root" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="todayLabel" destination="MRO-9t-1fV" id="5bi-Ch-hF5"/>
                         <outlet property="workdayCountLabel" destination="YVV-bg-xcW" id="8iL-32-DPg"/>
@@ -163,23 +160,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vug-RQ-iys">
-            <objects>
-                <viewController id="X3A-Ag-2Id" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XG1-9B-QgA"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fgt-zF-aGd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SdP-xH-Qq9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hJw-oe-nkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

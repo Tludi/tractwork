@@ -61,16 +61,22 @@ class TimePunchController {
   func newTimePunch(workday: Workday, timePunchPair: TimePunchPair) {
     if timePunchPair.firstTimePunch == nil {
       try! realm.write {
-        timePunchPair.firstTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date()])
+        timePunchPair.firstTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date(), "status": true])
       }
       print("created first TimePunch in a new pair")
+      print("Time Punch difference is: \(timePunchPair.punchDifference)")
     } else {
       try! realm.write {
-        timePunchPair.secondTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date()])
+        timePunchPair.secondTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date(), "status": false])
+        timePunchPair.punchDifference = calculateTimePunchDifference(firstTimePunch: timePunchPair.firstTimePunch!, secondTimePunch: timePunchPair.secondTimePunch!)
       }
       print("created second TimePunch")
     }
-    
+  }
+  
+  func calculateTimePunchDifference(firstTimePunch: TimePunch, secondTimePunch: TimePunch) -> Int {
+    let difference = secondTimePunch.punchTime.since(firstTimePunch.punchTime, in: .minute)
+    return Int(difference)
     
   }
 

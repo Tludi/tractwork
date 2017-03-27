@@ -2,18 +2,29 @@
 - If numbering print statements does not help, what would be better?
 
 - Determine steps for TimePunchPair
+  - add difference property to TPP model
+  - how and when to calculate TPP difference
+  - What happens when a TimePunch is edited?
+    - update the difference
+    - update the correct punch
+    - what to do if punch is deleted?
+      - if first punch is deleted, delete second?
+      - if second punch is deleted, revert to nil?
+  - set status for each timepunch
+
 - Should second punch be nil when creating new pair?
 
-- test if adding a module or if a Protocol will work when needing to access functions in different views
+√- test if adding a module or if a Protocol will work when needing to access functions in different views
   ex. Needing to create a timepunch in the first view and also in the timepunch list view
 
 - Add all needed labels, views, and buttons to first view
 - Determine the look of the second view - Timepunches for the day or show days first?
 - Determine what to show on the bottom of the first view. Latest punch or punches?
-- How to add a second punch to the timePunchPair
+√- How to add a second punch to the timePunchPair
 
 - Create branch for versioning and smaller branches for work. Do not work on master.
 
 - import images for first page
-- rename first page to rootView
+
+√- rename first page to rootView
 
