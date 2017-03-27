@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SecondViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    let workdays = try! Realm().objects(Workday.self)
+    if let workday = workdays.last {
+      let timepunches = workday.timePunchPairs
+      print("\(timepunches.count)")
+      for punch in timepunches {
+        print("\(punch.firstTimePunch)")
+        print("\(punch.secondTimePunch)")
+      }
+    }
+    
     // Do any additional setup after loading the view, typically from a nib.
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+
 
 
 }
