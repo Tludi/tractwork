@@ -11,8 +11,7 @@ import RealmSwift
 
 class SecondViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
     let workdays = try! Realm().objects(Workday.self)
     if let workday = workdays.last {
       let timepunches = workday.timePunchPairs
@@ -20,8 +19,25 @@ class SecondViewController: UIViewController {
       for punch in timepunches {
         print("\(punch.firstTimePunch)")
         print("\(punch.secondTimePunch)")
+
       }
+    } else {
+      print("There are no workdays")
     }
+  }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+//    let workdays = try! Realm().objects(Workday.self)
+//    if let workday = workdays.last {
+//      let timepunches = workday.timePunchPairs
+//      print("\(timepunches.count)")
+//      for punch in timepunches {
+//        print("\(punch.firstTimePunch)")
+//        print("\(punch.secondTimePunch)")
+//      }
+//    } else {
+//      print("There are no workdays")
+//    }
     
     // Do any additional setup after loading the view, typically from a nib.
   }
