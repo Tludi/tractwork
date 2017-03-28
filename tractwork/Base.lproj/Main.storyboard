@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,6 +72,12 @@
                                     <action selector="timePunchButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="UbI-k0-wan"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjE-zp-VGy">
+                                <rect key="frame" x="107" y="414" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,7 +92,10 @@
                             <constraint firstItem="TmF-9I-o0z" firstAttribute="top" secondItem="MRO-9t-1fV" secondAttribute="bottom" constant="8" symbolic="YES" id="Ob6-CQ-ElP"/>
                             <constraint firstItem="MRO-9t-1fV" firstAttribute="centerX" secondItem="tpZ-qu-RCv" secondAttribute="centerX" id="RZM-os-TqK"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="3TO-ca-RWN" secondAttribute="bottom" constant="48" id="Ui3-Uz-5mf"/>
+                            <constraint firstItem="DjE-zp-VGy" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="UnY-qu-7OY"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="DjE-zp-VGy" secondAttribute="bottom" constant="26" id="bhp-5Q-x6M"/>
                             <constraint firstItem="OoD-XT-K3t" firstAttribute="centerX" secondItem="MRO-9t-1fV" secondAttribute="centerX" id="bz2-iR-gaR"/>
+                            <constraint firstItem="DjE-zp-VGy" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="91" id="dkR-SF-yS8"/>
                             <constraint firstItem="tpZ-qu-RCv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="-1" id="eO7-zi-TNk"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="-148.5" id="exm-UA-ej4"/>
                             <constraint firstItem="TmF-9I-o0z" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="gbh-aa-YFO"/>
@@ -94,6 +104,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Root" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="currentStatusLabel" destination="DjE-zp-VGy" id="qCW-xf-KCz"/>
                         <outlet property="todayLabel" destination="MRO-9t-1fV" id="5bi-Ch-hF5"/>
                         <outlet property="workdayCountLabel" destination="YVV-bg-xcW" id="8iL-32-DPg"/>
                     </connections>

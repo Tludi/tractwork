@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
         print("\(punch.firstTimePunch)")
         print("\(punch.secondTimePunch)")
         print("Time Punch difference is: \(punch.punchDifference)")
+        print("Workday Status is: \(workday.currentStatus)")
 
       }
     } else {

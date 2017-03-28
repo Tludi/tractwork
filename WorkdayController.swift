@@ -29,7 +29,7 @@ class WorkdayController {
   
   func createWorkday() -> Workday {
     print("Hit createWorkday function")
-    let newWorkday = Workday(value: ["id": NSUUID().uuidString, "dayDate": Date()])
+    let newWorkday = Workday(value: ["id": NSUUID().uuidString, "dayDate": Date(), "currentStatus": false])
     //    newWorkday.id = NSUUID().uuidString
     //    newWorkday.dayDate = Date()
     try! realm.write {

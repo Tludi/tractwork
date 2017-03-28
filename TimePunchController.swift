@@ -11,6 +11,7 @@ import RealmSwift
 
 class TimePunchController {
   let realm = try! Realm()
+
   
   //***** TimePunch functions *****//
   func createNewTimePunch(workday: Workday) {
@@ -62,6 +63,7 @@ class TimePunchController {
     if timePunchPair.firstTimePunch == nil {
       try! realm.write {
         timePunchPair.firstTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date(), "status": true])
+        workday.currentStatus = true
       }
       print("created first TimePunch in a new pair")
       print("Time Punch difference is: \(timePunchPair.punchDifference)")
@@ -69,6 +71,7 @@ class TimePunchController {
       try! realm.write {
         timePunchPair.secondTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date(), "status": false])
         timePunchPair.punchDifference = calculateTimePunchDifference(firstTimePunch: timePunchPair.firstTimePunch!, secondTimePunch: timePunchPair.secondTimePunch!)
+        workday.currentStatus = false
       }
       print("created second TimePunch")
     }

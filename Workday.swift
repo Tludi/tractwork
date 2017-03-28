@@ -48,6 +48,17 @@ class Workday: Object {
   
 }
 
+extension Workday {
+  func getCurrentStatus() -> String {
+    if self.currentStatus {
+      return "Clocked In"
+    } else {
+      return "Clocked Out"
+    }
+  }
+}
+
+
 //class TimePunchPair: Object {
 //  dynamic var firstTimePunch: TimePunch?
 //  dynamic var secondTimePunch: TimePunch?
