@@ -4,15 +4,15 @@
 - If numbering print statements does not help, what would be better?
 
 - Determine steps for TimePunchPair
-  - add difference property to TPP model
-  - how and when to calculate TPP difference
+  √- add difference property to TPP model
+  √- how and when to calculate TPP difference
   - What happens when a TimePunch is edited?
     - update the difference
     - update the correct punch
     - what to do if punch is deleted?
       - if first punch is deleted, delete second?
       - if second punch is deleted, revert to nil?
-  - set status for each timepunch
+  √- set status for each timepunch
 
 - Should second punch be nil when creating new pair?
 
