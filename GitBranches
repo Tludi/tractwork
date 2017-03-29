@@ -1,0 +1,45 @@
+***** tractwork Git Branches *****
+Work in individual feature branches then merge to develop branch. When getting
+close to a version release, switch to release branch for testing and bug fixing.
+Merge with master for a release and fix bugs in a released version in a hotfix
+branch.
+
+- Master (tagged with version number 'v0.1.0')
+  - Develop
+
+    **** features
+
+    - dashboard (db-'feature name')
+      - punch button
+      - total time worked
+      - last time punch pair listed
+      - segue to second view from last time punch view
+      - set default punch out time
+    - secondView (sv-'feature name')
+      - table/collection for workdays
+      - graph for hours worked
+      - link to edit hours or punches
+    - Edit timePunch view
+      - how to update punch
+      - check if updated times are valid (punch1 before punch2)
+      - update total time
+    - Delete timePunch
+      - update total time for the day
+      - update time punch pair (delete?)
+    - App Settings
+      - New view for settings
+      - design view for settings
+      - Default clock out time (if user forgets to clock out for the day)
+    - Add general time to day
+      - which view to add time?
+      - update total time for the day
+      - edit and delete entry
+
+  - Release Branch (next version)
+  **** Once features are chosen for release, work on this branch. Small changes, bug fixes
+
+  - Hotfix
+  **** Bug fixes for released version
+
+
+

@@ -10,6 +10,7 @@
 		00E68D731E89B924004867CC /* WorkdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D721E89B924004867CC /* WorkdayController.swift */; };
 		00E68D751E89B938004867CC /* TimePunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D741E89B938004867CC /* TimePunchController.swift */; };
 		00E68D771E89CDCE004867CC /* TImePunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D761E89CDCE004867CC /* TImePunch.swift */; };
+		00F215E31E8C54BC004E24B8 /* GitBranches in Resources */ = {isa = PBXBuildFile; fileRef = 00F215E21E8C54BC004E24B8 /* GitBranches */; };
 		00F588431E88DAE800527350 /* ToDo List in Resources */ = {isa = PBXBuildFile; fileRef = 00F588421E88DAE800527350 /* ToDo List */; };
 		E1C880C4386BD3E57D4264B2 /* Pods_tractwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */; };
 		EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6211E848F0500CA2608 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		00E68D721E89B924004867CC /* WorkdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkdayController.swift; sourceTree = "<group>"; };
 		00E68D741E89B938004867CC /* TimePunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePunchController.swift; sourceTree = "<group>"; };
 		00E68D761E89CDCE004867CC /* TImePunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImePunch.swift; sourceTree = "<group>"; };
+		00F215E21E8C54BC004E24B8 /* GitBranches */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GitBranches; sourceTree = "<group>"; };
 		00F588421E88DAE800527350 /* ToDo List */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "ToDo List"; path = "tractwork/ToDo List"; sourceTree = "<group>"; };
 		207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tractwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9D8DF18D475AB67EE133D0 /* Pods-tractwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tractwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tractwork/Pods-tractwork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		EF34B6151E848F0400CA2608 = {
 			isa = PBXGroup;
 			children = (
+				00F215E21E8C54BC004E24B8 /* GitBranches */,
 				00F588421E88DAE800527350 /* ToDo List */,
 				EF34B6201E848F0500CA2608 /* tractwork */,
 				00E68D711E89B8F6004867CC /* Controllers */,
@@ -212,6 +215,7 @@
 				EF34B62E1E848F0500CA2608 /* LaunchScreen.storyboard in Resources */,
 				EF34B62B1E848F0500CA2608 /* Assets.xcassets in Resources */,
 				EF34B6361E84943C00CA2608 /* Podfile in Resources */,
+				00F215E31E8C54BC004E24B8 /* GitBranches in Resources */,
 				EF34B6291E848F0500CA2608 /* Main.storyboard in Resources */,
 				00F588431E88DAE800527350 /* ToDo List in Resources */,
 			);
