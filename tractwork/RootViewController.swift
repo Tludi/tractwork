@@ -27,8 +27,8 @@ class RootViewController: UIViewController {
     timePunch.createNewTimePunch(workday: todaysWorkday)
 //    currentStatusLabel.text = todaysWorkday.currentStatus
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
-    firstPunchLabel.text = getPunch(workday: todaysWorkday).0
-    secondPunchLabel.text = getPunch(workday: todaysWorkday).1
+    firstPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).firstPunch
+    secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch
   }
   
   
@@ -62,49 +62,12 @@ class RootViewController: UIViewController {
     todayLabel.text = "\(todaysWorkday.id)"
     workdayCountLabel.text = "\(workday.getWorkdays().count)"
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
-    
-    // Get the latest TimePunchPair and display in dashboard if exists
-    // Need to push it its own function so it also can be called from button
-//    if let lastPunchPair = todaysWorkday.timePunchPairs.last {
-//      if let firstTimePunch = lastPunchPair.firstTimePunch {
-//        print("\(firstTimePunch.punchTime.toString())")
-//        firstPunchLabel.text = "\(firstTimePunch.punchTime.toString(format: .custom("hh:mm")))"
-//      } else {
-//        firstPunchLabel.text = "No Punches"
-//      }
-//      if let secondTimePunch = lastPunchPair.secondTimePunch {
-//        print("\(secondTimePunch.punchTime.toString())")
-//        secondPunchLabel.text = "\(secondTimePunch.punchTime.toString(format: .custom("hh:mm")))"
-//      } else {
-//        secondPunchLabel.text = "Working"
-//      }
-//    }
  
-
-
-    firstPunchLabel.text = getPunch(workday: todaysWorkday).0
-    secondPunchLabel.text = getPunch(workday: todaysWorkday).1
+    firstPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).firstPunch
+    secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch
     
+  }
 
-  }
-  
-  func getPunch(workday: Workday) -> (String, String) {
-    var firstString = ""
-    var secondString = ""
-    if let lastPunchPair = workday.timePunchPairs.last {
-      if let firstTimePunch = lastPunchPair.firstTimePunch {
-        firstString = firstTimePunch.punchTime.toString(format: .custom("hh:mm"))
-      } else {
-        firstString = "No Punches"
-      }
-      if let secondTimePunch = lastPunchPair.secondTimePunch {
-        secondString = secondTimePunch.punchTime.toString(format: .custom("hh:mm"))
-      } else {
-        secondString = "Working"
-      }
-    }
-    return (firstString, secondString)
-  }
 
 
 }

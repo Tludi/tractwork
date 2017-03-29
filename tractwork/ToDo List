@@ -1,32 +1,68 @@
+***** ToDo Today *****
+
+1. Remember to Git Pull/Push first thing when starting
+2. Work on correct branch
+3. Commit often!
+
+- Develop versioning system
+- Create branch for versioning and smaller branches for work. Do not work on master.
+- Move getPunch function to correct file
+
+
+
+10. Remember to push changes at the end of the day
+
+
+
+
 √√√√√√ Option + v to add the check/sqroot symbol
+
+
+***** Development *****
+
+- Add total time worked today label to dashboard
+- calculate total time worked for the day and push to label
 
 - Number steps in Print Statements to show outline
 - If numbering print statements does not help, what would be better?
 
+- add segue to bottom view on dashboard to the second view
+- bottom view shows last two punches if exists and arrow to second view
+- text for second punch on dashboard bottom view if first punch is empty
+- it now does not show anything if there are no punches for today
+- add center text (No time for today) on bottom view and hide/show based on punches
+
 - Determine steps for TimePunchPair
-  √- add difference property to TPP model
-  √- how and when to calculate TPP difference
-  - What happens when a TimePunch is edited?
-    - update the difference
-    - update the correct punch
-    - what to do if punch is deleted?
-      - if first punch is deleted, delete second?
-      - if second punch is deleted, revert to nil?
-  √- set status for each timepunch
+- What happens when a TimePunch is edited?
+- update the difference
+- update the correct punch
+- what to do if punch is deleted?
+- if first punch is deleted, delete second?
+- if second punch is deleted, revert to nil?
 
 - Should second punch be nil when creating new pair?
 
-√- test if adding a module or if a Protocol will work when needing to access functions in different views
-  ex. Needing to create a timepunch in the first view and also in the timepunch list view
+- second view
+- Create table/collection view for second view
+- table sections by week - Look at Fitbit app
+- Graph on top of second page showing hours worked?
 
+
+*****  Design *****
+
+- import images for first page
 - Add all needed labels, views, and buttons to first view
 - Determine the look of the second view - Timepunches for the day or show days first?
 - Determine what to show on the bottom of the first view. Latest punch or punches?
+
+
+***** Finished *****
+
+√- set status for each timepunch
+√- add difference property to TPP model
+√- how and when to calculate TPP difference
+√- test if adding a module or if a Protocol will work when needing to access functions in different views
+ex. Needing to create a timepunch in the first view and also in the timepunch list view
 √- How to add a second punch to the timePunchPair
-
-- Create branch for versioning and smaller branches for work. Do not work on master.
-
-- import images for first page
-
 √- rename first page to rootView
 

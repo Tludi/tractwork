@@ -69,4 +69,5 @@ class WorkdayController {
     // return empty Workday and false if there is no workday for today
     return (workday, exists)
   }
+  
 }

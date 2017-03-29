@@ -59,6 +59,25 @@ class TimePunchController {
     return newTimePunchPair
   }
   
+  
+  func punchFromLastTimePunchPair(workday: Workday) -> (firstPunch:String, secondPunch:String) {
+    var firstString = ""
+    var secondString = ""
+    if let lastPunchPair = workday.timePunchPairs.last {
+      if let firstTimePunch = lastPunchPair.firstTimePunch {
+        firstString = firstTimePunch.punchTime.toString(format: .custom("hh:mm"))
+      } else {
+        firstString = "No Punches"
+      }
+      if let secondTimePunch = lastPunchPair.secondTimePunch {
+        secondString = secondTimePunch.punchTime.toString(format: .custom("hh:mm"))
+      } else {
+        secondString = "Working"
+      }
+    }
+    return (firstString, secondString)
+  }
+  
   func newTimePunch(workday: Workday, timePunchPair: TimePunchPair) {
     if timePunchPair.firstTimePunch == nil {
       try! realm.write {
