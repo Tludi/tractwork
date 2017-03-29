@@ -18,6 +18,8 @@ class RootViewController: UIViewController {
   @IBOutlet weak var workdayCountLabel: UILabel!
   @IBOutlet weak var todayLabel: UILabel!
   @IBOutlet weak var currentStatusLabel: UILabel!
+  @IBOutlet weak var firstPunchLabel: UILabel!
+  @IBOutlet weak var secondPunchLabel: UILabel!
 
   // Buttons
   @IBAction func timePunchButton(_ sender: Any) {
@@ -58,6 +60,7 @@ class RootViewController: UIViewController {
     todayLabel.text = "\(todaysWorkday.id)"
     workdayCountLabel.text = "\(workday.getWorkdays().count)"
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
+    firstPunchLabel.text = "\(todaysWorkday.timePunchPairs.last?.firstTimePunch?.punchTime)"
     
 
   }
