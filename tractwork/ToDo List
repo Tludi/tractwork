@@ -1,13 +1,14 @@
 ***** ToDo Today *****
 
 1. Remember to Git Pull/Push first thing when starting
-2. Work on correct branch
+2. Work on correct branch - feature branch
 3. Commit often!
 
-- Develop versioning system
+√- Develop versioning system
 - Create branch for versioning and smaller branches for work. Do not work on master.
-- Move getPunch function to correct file
-
+√- Move getPunch function to correct file
+- add dashboard total time label
+- dashboard total time algorithm
 
 
 10. Remember to push changes at the end of the day
