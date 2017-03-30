@@ -20,6 +20,7 @@ class RootViewController: UIViewController {
   @IBOutlet weak var currentStatusLabel: UILabel!
   @IBOutlet weak var firstPunchLabel: UILabel!
   @IBOutlet weak var secondPunchLabel: UILabel!
+  @IBOutlet weak var totalTimeLabel: UILabel!
 
   // Buttons
   @IBAction func timePunchButton(_ sender: Any) {
@@ -29,6 +30,8 @@ class RootViewController: UIViewController {
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
     firstPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).firstPunch
     secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch
+    
+    totalTimeLabel.text = todaysWorkday.getTotalTime()
   }
   
   
@@ -62,6 +65,8 @@ class RootViewController: UIViewController {
     todayLabel.text = "\(todaysWorkday.id)"
     workdayCountLabel.text = "\(workday.getWorkdays().count)"
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
+    
+    totalTimeLabel.text = todaysWorkday.getTotalTime()
  
     firstPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).firstPunch
     secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch

@@ -4,11 +4,8 @@
 2. Work on correct branch - feature branch
 3. Commit often!
 
-√- Develop versioning system
-- Create branch for versioning and smaller branches for work. Do not work on master.
-√- Move getPunch function to correct file
-- add dashboard total time label
-- dashboard total time algorithm
+- it now does not show anything if there are no punches for today
+- add center text (No time for today) on bottom view and hide/show based on punches
 
 
 10. Remember to push changes at the end of the day
@@ -21,8 +18,6 @@
 
 ***** Development *****
 
-- Add total time worked today label to dashboard
-- calculate total time worked for the day and push to label
 
 - Number steps in Print Statements to show outline
 - If numbering print statements does not help, what would be better?
@@ -30,8 +25,6 @@
 - add segue to bottom view on dashboard to the second view
 - bottom view shows last two punches if exists and arrow to second view
 - text for second punch on dashboard bottom view if first punch is empty
-- it now does not show anything if there are no punches for today
-- add center text (No time for today) on bottom view and hide/show based on punches
 
 - Determine steps for TimePunchPair
 - What happens when a TimePunch is edited?
@@ -59,6 +52,12 @@
 
 ***** Finished *****
 
+√- rename second view
+√- Add total time worked today label to dashboard
+√- calculate total time worked for the day and push to label
+√- Develop versioning system
+√- Create branch for versioning and smaller branches for work. Do not work on master.
+√- Move getPunch function to correct file
 √- set status for each timepunch
 √- add difference property to TPP model
 √- how and when to calculate TPP difference

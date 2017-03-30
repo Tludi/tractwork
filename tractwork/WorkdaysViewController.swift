@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SecondViewController: UIViewController {
+class WorkdaysViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     let workdays = try! Realm().objects(Workday.self)
@@ -17,8 +17,8 @@ class SecondViewController: UIViewController {
       let timepunches = workday.timePunchPairs
       print("\(timepunches.count)")
       for punch in timepunches {
-        print("\(punch.firstTimePunch)")
-        print("\(punch.secondTimePunch)")
+        print("\(String(describing: punch.firstTimePunch))")
+        print("\(String(describing: punch.secondTimePunch))")
         print("Time Punch difference is: \(punch.punchDifference)")
         print("Workday Status is: \(workday.currentStatus)")
 

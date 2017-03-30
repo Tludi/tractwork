@@ -56,56 +56,18 @@ extension Workday {
       return "Clocked Out"
     }
   }
+  
+  func getTotalTime() -> String {
+    let totalMinutes = self.totalWorkdayMinutes
+    let hours = totalMinutes/60
+    let minutes = totalMinutes%60
+    if minutes < 10 {
+      return "\(hours):0\(minutes)"
+    } else {
+      return "\(hours):\(minutes)"
+    }
+  }
 }
 
 
-//class TimePunchPair: Object {
-//  dynamic var firstTimePunch: TimePunch?
-//  dynamic var secondTimePunch: TimePunch?
-//}
-//
-//
-//class TimePunch: Object {
-//  dynamic var id = ""
-//  dynamic var punchTime = Date()
-//  dynamic var status = false
-//  
-//  override static func primaryKey() -> String? {
-//    return "id"
-//  }
-//  
-//  var timePunchWorkday = LinkingObjects(fromType: Workday.self, property: "timePunches")
-//}
-
-
-// Objects to include later
-
-//class AdditionalTime: Object {
-//  dynamic var id = ""
-//  dynamic var addedTime = Int()
-//  
-//  override static func primaryKey() -> String? {
-//    return "id"
-//  }
-//  
-//  var additionalTimeWorkday = LinkingObjects(fromType: Workday.self, property: "additionalTimes")
-//}
-//
-//
-//class Project: Object {
-//  dynamic var id = ""
-//  dynamic var projectName = "general work"
-//  dynamic var projectExternalID = "project ID"
-//  dynamic var locationAddress = "1234 happy drive"
-//  dynamic var locationCity = "Portland"
-//  dynamic var locationState = "Oregon"
-//  dynamic var locationZIP = "12345"
-//  
-//  override static func primaryKey() -> String? {
-//    return "id"
-//  }
-//  
-//  var workdayProject = LinkingObjects(fromType: Workday.self, property: "projects")
-//  
-//}
 

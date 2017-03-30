@@ -15,7 +15,7 @@
 		E1C880C4386BD3E57D4264B2 /* Pods_tractwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */; };
 		EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6211E848F0500CA2608 /* AppDelegate.swift */; };
 		EF34B6241E848F0500CA2608 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6231E848F0500CA2608 /* RootViewController.swift */; };
-		EF34B6261E848F0500CA2608 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6251E848F0500CA2608 /* SecondViewController.swift */; };
+		EF34B6261E848F0500CA2608 /* WorkdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */; };
 		EF34B6291E848F0500CA2608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF34B6271E848F0500CA2608 /* Main.storyboard */; };
 		EF34B62B1E848F0500CA2608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF34B62A1E848F0500CA2608 /* Assets.xcassets */; };
 		EF34B62E1E848F0500CA2608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF34B62C1E848F0500CA2608 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 		EF34B61E1E848F0500CA2608 /* tractwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tractwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF34B6211E848F0500CA2608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF34B6231E848F0500CA2608 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		EF34B6251E848F0500CA2608 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkdaysViewController.swift; sourceTree = "<group>"; };
 		EF34B6281E848F0500CA2608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF34B62A1E848F0500CA2608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF34B62D1E848F0500CA2608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			children = (
 				EF34B6271E848F0500CA2608 /* Main.storyboard */,
 				EF34B6231E848F0500CA2608 /* RootViewController.swift */,
-				EF34B6251E848F0500CA2608 /* SecondViewController.swift */,
+				EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */,
 				EF841A301E849598007E93E3 /* Support Files */,
 			);
 			path = tractwork;
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF34B6261E848F0500CA2608 /* SecondViewController.swift in Sources */,
+				EF34B6261E848F0500CA2608 /* WorkdaysViewController.swift in Sources */,
 				00E68D731E89B924004867CC /* WorkdayController.swift in Sources */,
 				EF34B6391E84945100CA2608 /* DateHelper.swift in Sources */,
 				EF841A331E8496F1007E93E3 /* Workday.swift in Sources */,
