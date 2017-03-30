@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009DC6B51E8D9CDC00B43276 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009DC6B41E8D9CDC00B43276 /* DashboardViewController.swift */; };
 		00E68D731E89B924004867CC /* WorkdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D721E89B924004867CC /* WorkdayController.swift */; };
 		00E68D751E89B938004867CC /* TimePunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D741E89B938004867CC /* TimePunchController.swift */; };
 		00E68D771E89CDCE004867CC /* TImePunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E68D761E89CDCE004867CC /* TImePunch.swift */; };
@@ -14,7 +15,6 @@
 		00F588431E88DAE800527350 /* ToDo List in Resources */ = {isa = PBXBuildFile; fileRef = 00F588421E88DAE800527350 /* ToDo List */; };
 		E1C880C4386BD3E57D4264B2 /* Pods_tractwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */; };
 		EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6211E848F0500CA2608 /* AppDelegate.swift */; };
-		EF34B6241E848F0500CA2608 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6231E848F0500CA2608 /* RootViewController.swift */; };
 		EF34B6261E848F0500CA2608 /* WorkdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */; };
 		EF34B6291E848F0500CA2608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF34B6271E848F0500CA2608 /* Main.storyboard */; };
 		EF34B62B1E848F0500CA2608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF34B62A1E848F0500CA2608 /* Assets.xcassets */; };
@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009DC6B41E8D9CDC00B43276 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		00E68D721E89B924004867CC /* WorkdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkdayController.swift; sourceTree = "<group>"; };
 		00E68D741E89B938004867CC /* TimePunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePunchController.swift; sourceTree = "<group>"; };
 		00E68D761E89CDCE004867CC /* TImePunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImePunch.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		DE63B58BB29C1F5383554E3F /* Pods-tractwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tractwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-tractwork/Pods-tractwork.release.xcconfig"; sourceTree = "<group>"; };
 		EF34B61E1E848F0500CA2608 /* tractwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tractwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF34B6211E848F0500CA2608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF34B6231E848F0500CA2608 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkdaysViewController.swift; sourceTree = "<group>"; };
 		EF34B6281E848F0500CA2608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF34B62A1E848F0500CA2608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				EF34B6271E848F0500CA2608 /* Main.storyboard */,
-				EF34B6231E848F0500CA2608 /* RootViewController.swift */,
+				009DC6B41E8D9CDC00B43276 /* DashboardViewController.swift */,
 				EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */,
 				EF841A301E849598007E93E3 /* Support Files */,
 			);
@@ -282,8 +282,8 @@
 				EF841A331E8496F1007E93E3 /* Workday.swift in Sources */,
 				00E68D751E89B938004867CC /* TimePunchController.swift in Sources */,
 				EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */,
-				EF34B6241E848F0500CA2608 /* RootViewController.swift in Sources */,
 				00E68D771E89CDCE004867CC /* TImePunch.swift in Sources */,
+				009DC6B51E8D9CDC00B43276 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
