@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,12 +68,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqn-fr-64e">
+                                        <rect key="frame" x="138" y="238" width="100" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="MhH-Ak-7pV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="MRO-9t-1fV" firstAttribute="top" secondItem="4YM-ci-NG1" secondAttribute="top" id="0xT-tg-G5I"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zqn-fr-64e" secondAttribute="bottom" constant="60" id="7zF-Wd-IgV"/>
                                     <constraint firstItem="OoD-XT-K3t" firstAttribute="centerX" secondItem="4YM-ci-NG1" secondAttribute="centerX" id="J2H-io-YYw"/>
                                     <constraint firstItem="3TO-ca-RWN" firstAttribute="baseline" secondItem="YVV-bg-xcW" secondAttribute="baseline" constant="-1" id="JPI-ca-sYD"/>
+                                    <constraint firstItem="Zqn-fr-64e" firstAttribute="top" secondItem="OoD-XT-K3t" secondAttribute="bottom" constant="56" id="KUt-sr-DPN"/>
+                                    <constraint firstItem="Zqn-fr-64e" firstAttribute="centerX" secondItem="4YM-ci-NG1" secondAttribute="centerX" id="M8b-b0-fa7"/>
                                     <constraint firstItem="YVV-bg-xcW" firstAttribute="trailing" secondItem="4YM-ci-NG1" secondAttribute="trailingMargin" id="OCK-An-BWR"/>
                                     <constraint firstItem="3TO-ca-RWN" firstAttribute="bottom" secondItem="4YM-ci-NG1" secondAttribute="bottomMargin" id="T8T-SK-kvD"/>
                                     <constraint firstItem="OoD-XT-K3t" firstAttribute="centerY" secondItem="4YM-ci-NG1" secondAttribute="centerY" id="VQH-Em-HTL"/>
@@ -154,6 +166,7 @@
                         <outlet property="firstPunchLabel" destination="3JT-oe-W1Y" id="cYU-I0-LjS"/>
                         <outlet property="secondPunchLabel" destination="Nby-ZA-Rdo" id="x5F-ha-yFH"/>
                         <outlet property="todayLabel" destination="MRO-9t-1fV" id="5bi-Ch-hF5"/>
+                        <outlet property="totalTimeLabel" destination="Zqn-fr-64e" id="vvN-c3-1q4"/>
                         <outlet property="workdayCountLabel" destination="YVV-bg-xcW" id="8iL-32-DPg"/>
                     </connections>
                 </viewController>
@@ -161,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="748" y="-328.78560719640183"/>
         </scene>
-        <!--Second-->
+        <!--Workdays-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="tractwork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="WorkdaysViewController" customModule="tractwork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -195,7 +208,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Workdays" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

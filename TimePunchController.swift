@@ -91,6 +91,7 @@ class TimePunchController {
         timePunchPair.secondTimePunch = TimePunch(value: ["id": NSUUID().uuidString, "dayDate": Date(), "status": false])
         timePunchPair.punchDifference = calculateTimePunchDifference(firstTimePunch: timePunchPair.firstTimePunch!, secondTimePunch: timePunchPair.secondTimePunch!)
         workday.currentStatus = false
+        workday.totalWorkdayMinutes += timePunchPair.punchDifference
       }
       print("created second TimePunch")
     }
@@ -101,5 +102,7 @@ class TimePunchController {
     return Int(difference)
     
   }
+  
+
 
 }
