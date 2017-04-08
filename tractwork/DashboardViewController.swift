@@ -38,6 +38,10 @@ class DashboardViewController: UIViewController {
     noTimeTodayLabel.isHidden = true
   }
   
+  @IBAction func showWeeksButton(_ sender: UIButton) {
+    print("hit show weeks button")
+    self.tabBarController?.selectedIndex = 1
+  }
   
   //**** Testing features to remove later ****//
   @IBAction func clearWorkdaysButton(_ sender: UIButton) {

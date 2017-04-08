@@ -5,6 +5,9 @@
 3. Commit often!
 
 
+- add segue to bottom view on dashboard to the second view
+- bottom view shows last two punches if exists and arrow to second view
+
 
 10. Remember to push changes at the end of the day
 
@@ -20,9 +23,6 @@
 - Number steps in Print Statements to show outline
 - If numbering print statements does not help, what would be better?
 
-- add segue to bottom view on dashboard to the second view
-- bottom view shows last two punches if exists and arrow to second view
-- text for second punch on dashboard bottom view if first punch is empty
 
 - Determine steps for TimePunchPair
 - What happens when a TimePunch is edited?

@@ -117,8 +117,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-2Y-hNd">
                                 <rect key="frame" x="0.0" y="444" width="375" height="174"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-6u-gv6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
+                                        <color key="backgroundColor" red="0.19998714393707173" green="0.97344871150525847" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="showWeeksButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="6fU-hp-5U6"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nby-ZA-Rdo">
-                                        <rect key="frame" x="225" y="77" width="120" height="21"/>
+                                        <rect key="frame" x="225" y="77" width="110" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -138,16 +145,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="lSp-QZ-etP">
+                                        <rect key="frame" x="343" y="66" width="24" height="42"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="leading" secondItem="3JT-oe-W1Y" secondAttribute="trailing" constant="65" id="1fQ-3b-1bZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="AXa-6u-gv6" secondAttribute="bottom" id="1tk-Xz-cHN"/>
                                     <constraint firstItem="miB-A1-P1u" firstAttribute="centerX" secondItem="xeW-2Y-hNd" secondAttribute="centerX" id="8rR-yR-LAD"/>
                                     <constraint firstItem="3JT-oe-W1Y" firstAttribute="leading" secondItem="xeW-2Y-hNd" secondAttribute="leading" constant="40" id="FyG-Ow-9ii"/>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="baseline" secondItem="3JT-oe-W1Y" secondAttribute="baseline" id="Ic4-YT-U3w"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nby-ZA-Rdo" secondAttribute="trailing" constant="30" id="LDG-bs-XIh"/>
+                                    <constraint firstItem="AXa-6u-gv6" firstAttribute="top" secondItem="xeW-2Y-hNd" secondAttribute="top" id="KKJ-Zl-dDN"/>
+                                    <constraint firstItem="lSp-QZ-etP" firstAttribute="top" secondItem="xeW-2Y-hNd" secondAttribute="top" constant="66" id="KkJ-VR-UiK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nby-ZA-Rdo" secondAttribute="trailing" constant="40" id="LDG-bs-XIh"/>
                                     <constraint firstItem="miB-A1-P1u" firstAttribute="centerY" secondItem="xeW-2Y-hNd" secondAttribute="centerY" id="O85-iY-BrI"/>
+                                    <constraint firstAttribute="bottom" secondItem="lSp-QZ-etP" secondAttribute="bottom" constant="66" id="bgQ-5P-DUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="lSp-QZ-etP" secondAttribute="trailing" constant="8" id="bln-9d-ISl"/>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="centerY" secondItem="xeW-2Y-hNd" secondAttribute="centerY" id="c6M-Gc-Var"/>
+                                    <constraint firstItem="lSp-QZ-etP" firstAttribute="leading" secondItem="Nby-ZA-Rdo" secondAttribute="trailing" constant="8" id="cnF-i2-ffc"/>
+                                    <constraint firstAttribute="trailing" secondItem="AXa-6u-gv6" secondAttribute="trailing" id="mEh-wd-h0J"/>
+                                    <constraint firstItem="AXa-6u-gv6" firstAttribute="leading" secondItem="xeW-2Y-hNd" secondAttribute="leading" id="vbo-YN-U5a"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -244,6 +262,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back Arrow" width="13" height="22"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
