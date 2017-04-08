@@ -4,8 +4,6 @@
 2. Work on correct branch - feature branch
 3. Commit often!
 
-- it now does not show anything if there are no punches for today
-- add center text (No time for today) on bottom view and hide/show based on punches
 
 
 10. Remember to push changes at the end of the day
@@ -52,6 +50,8 @@
 
 ***** Finished *****
 
+√ it now does not show anything if there are no punches for today
+√ add center text (No time for today) on bottom view and hide/show based on punches
 √- rename second view
 √- Add total time worked today label to dashboard
 √- calculate total time worked for the day and push to label

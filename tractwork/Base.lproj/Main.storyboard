@@ -132,13 +132,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-A1-P1u">
+                                        <rect key="frame" x="166" y="77" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="leading" secondItem="3JT-oe-W1Y" secondAttribute="trailing" constant="65" id="1fQ-3b-1bZ"/>
+                                    <constraint firstItem="miB-A1-P1u" firstAttribute="centerX" secondItem="xeW-2Y-hNd" secondAttribute="centerX" id="8rR-yR-LAD"/>
                                     <constraint firstItem="3JT-oe-W1Y" firstAttribute="leading" secondItem="xeW-2Y-hNd" secondAttribute="leading" constant="40" id="FyG-Ow-9ii"/>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="baseline" secondItem="3JT-oe-W1Y" secondAttribute="baseline" id="Ic4-YT-U3w"/>
                                     <constraint firstAttribute="trailing" secondItem="Nby-ZA-Rdo" secondAttribute="trailing" constant="30" id="LDG-bs-XIh"/>
+                                    <constraint firstItem="miB-A1-P1u" firstAttribute="centerY" secondItem="xeW-2Y-hNd" secondAttribute="centerY" id="O85-iY-BrI"/>
                                     <constraint firstItem="Nby-ZA-Rdo" firstAttribute="centerY" secondItem="xeW-2Y-hNd" secondAttribute="centerY" id="c6M-Gc-Var"/>
                                 </constraints>
                             </view>
@@ -164,6 +172,7 @@
                     <connections>
                         <outlet property="currentStatusLabel" destination="DjE-zp-VGy" id="qCW-xf-KCz"/>
                         <outlet property="firstPunchLabel" destination="3JT-oe-W1Y" id="cYU-I0-LjS"/>
+                        <outlet property="noTimeTodayLabel" destination="miB-A1-P1u" id="udS-tu-m2k"/>
                         <outlet property="secondPunchLabel" destination="Nby-ZA-Rdo" id="x5F-ha-yFH"/>
                         <outlet property="todayLabel" destination="MRO-9t-1fV" id="5bi-Ch-hF5"/>
                         <outlet property="totalTimeLabel" destination="Zqn-fr-64e" id="vvN-c3-1q4"/>
