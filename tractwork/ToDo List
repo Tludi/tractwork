@@ -5,7 +5,12 @@
 3. Commit often!
 
 
-- Create table/collection view for second view
+√ Create table/collection view for second view
+- why use table over collection?
+- first section shows current week
+- should today show punche pairs ?
+- look at fitbit app for design
+- allow to show previous weeks even though there are no hours
 
 
 
