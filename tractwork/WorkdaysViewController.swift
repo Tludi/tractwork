@@ -13,6 +13,8 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
 
   let realm = try! Realm()
   
+  @IBOutlet weak var weeksTable: UITableView!
+  
   override func viewWillAppear(_ animated: Bool) {
     let workdays = try! Realm().objects(Workday.self)
     if let workday = workdays.last {
@@ -28,7 +30,11 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
     } else {
       print("There are no workdays")
     }
+    weeksTable.reloadData()
   }
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -53,9 +59,12 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let days = realm.objects(Workday.self)
     var day = Workday()
-//    print("there are \(days.count) days")
+    print("there are \(days.count) days")
     if days.count != 0 {
       day = days.last!
+      print(day)
+    } else {
+      print("there are no days")
     }
     
     

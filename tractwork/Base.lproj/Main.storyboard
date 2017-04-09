@@ -258,6 +258,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workdays" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="weeksTable" destination="0Hz-3h-xvk" id="hUb-1i-0hX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
