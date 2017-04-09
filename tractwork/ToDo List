@@ -4,8 +4,13 @@
 2. Work on correct branch - feature branch
 3. Commit often!
 
+<<<<<<< HEAD
 - db TPP view layout
 - tables vs collections
+=======
+
+
+>>>>>>> dashboard
 
 
 10. Remember to push changes at the end of the day
@@ -22,9 +27,6 @@
 - Number steps in Print Statements to show outline
 - If numbering print statements does not help, what would be better?
 
-- add segue to bottom view on dashboard to the second view
-- bottom view shows last two punches if exists and arrow to second view
-- text for second punch on dashboard bottom view if first punch is empty
 
 - Determine steps for TimePunchPair
 - What happens when a TimePunch is edited?
@@ -36,10 +38,14 @@
 
 - Should second punch be nil when creating new pair?
 
-- second view
+
+--**** second view - workweeks
 - Create table/collection view for second view
 - table sections by week - Look at Fitbit app
 - Graph on top of second page showing hours worked?
+- current week section
+- sections for previous weeks
+
 
 
 *****  Design *****
@@ -52,6 +58,8 @@
 
 ***** Finished *****
 
+√ it now does not show anything if there are no punches for today
+√ add center text (No time for today) on bottom view and hide/show based on punches
 √- rename second view
 √- Add total time worked today label to dashboard
 √- calculate total time worked for the day and push to label
@@ -66,3 +74,5 @@ ex. Needing to create a timepunch in the first view and also in the timepunch li
 √- How to add a second punch to the timePunchPair
 √- rename first page to rootView
 
+√ add segue to bottom view on dashboard to the second view - self.tabViewController.selectIndex
+√ bottom view shows last two punches if exists and arrow to second view

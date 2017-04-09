@@ -18,9 +18,12 @@ class DashboardViewController: UIViewController {
   @IBOutlet weak var workdayCountLabel: UILabel!
   @IBOutlet weak var todayLabel: UILabel!
   @IBOutlet weak var currentStatusLabel: UILabel!
+  @IBOutlet weak var totalTimeLabel: UILabel!
+  
+  
+  @IBOutlet weak var noTimeTodayLabel: UILabel!
   @IBOutlet weak var firstPunchLabel: UILabel!
   @IBOutlet weak var secondPunchLabel: UILabel!
-  @IBOutlet weak var totalTimeLabel: UILabel!
 
   // Buttons
   @IBAction func timePunchButton(_ sender: Any) {
@@ -32,8 +35,13 @@ class DashboardViewController: UIViewController {
     secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch
     
     totalTimeLabel.text = todaysWorkday.getTotalTime()
+    noTimeTodayLabel.isHidden = true
   }
   
+  @IBAction func showWeeksButton(_ sender: UIButton) {
+    print("hit show weeks button")
+    self.tabBarController?.selectedIndex = 1
+  }
   
   //**** Testing features to remove later ****//
   @IBAction func clearWorkdaysButton(_ sender: UIButton) {
@@ -67,7 +75,12 @@ class DashboardViewController: UIViewController {
     currentStatusLabel.text = todaysWorkday.getCurrentStatus()
     
     totalTimeLabel.text = todaysWorkday.getTotalTime()
- 
+    if todaysWorkday.timePunchPairs.count == 0 {
+      noTimeTodayLabel.text = "No Time For Today"
+    } else {
+      noTimeTodayLabel.isHidden = true
+    }
+    
     firstPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).firstPunch
     secondPunchLabel.text = TimePunchController().punchFromLastTimePunchPair(workday: todaysWorkday).secondPunch
     
