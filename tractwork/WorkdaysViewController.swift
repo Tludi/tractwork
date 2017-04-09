@@ -12,6 +12,7 @@ import RealmSwift
 class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   let realm = try! Realm()
+  let today = Date()
   
   @IBOutlet weak var weeksTable: UITableView!
   
@@ -41,7 +42,18 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+//    return the number of weeks
+    return today.component(.week)!
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    var headerText = String()
+    if section == 0 {
+      headerText = "This Week"
+    } else {
+      headerText = "Week \(section)"
+    }
+    return headerText
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
