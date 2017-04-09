@@ -5,8 +5,7 @@
 3. Commit often!
 
 
-- add segue to bottom view on dashboard to the second view
-- bottom view shows last two punches if exists and arrow to second view
+
 
 
 10. Remember to push changes at the end of the day
@@ -34,10 +33,14 @@
 
 - Should second punch be nil when creating new pair?
 
-- second view
+
+--**** second view - workweeks
 - Create table/collection view for second view
 - table sections by week - Look at Fitbit app
 - Graph on top of second page showing hours worked?
+- current week section
+- sections for previous weeks
+
 
 
 *****  Design *****
@@ -66,3 +69,5 @@ ex. Needing to create a timepunch in the first view and also in the timepunch li
 √- How to add a second punch to the timePunchPair
 √- rename first page to rootView
 
+√ add segue to bottom view on dashboard to the second view - self.tabViewController.selectIndex
+√ bottom view shows last two punches if exists and arrow to second view
