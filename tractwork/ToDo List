@@ -5,7 +5,7 @@
 3. Commit often!
 
 
-
+- Create table/collection view for second view
 
 
 
@@ -37,7 +37,7 @@
 
 
 --**** second view - workweeks
-- Create table/collection view for second view
+
 - table sections by week - Look at Fitbit app
 - Graph on top of second page showing hours worked?
 - current week section
