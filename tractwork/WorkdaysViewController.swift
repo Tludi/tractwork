@@ -13,6 +13,24 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
 
   let realm = try! Realm()
   let today = Date()
+  var weeks = [Date]()
+  
+  func getWeeksForYear() -> [Date] {
+    let date = Date()
+    
+    var count = date.component(.week)!
+    var diff = 0
+    var startsOfTheWeek: [Date] = []
+    while count > 0 {
+      let day = date.dateFor(.startOfWeek).adjust(.week, offset: diff)
+      print(day)
+      startsOfTheWeek.append(day)
+      count -= 1
+      diff -= 1
+    }
+    
+    return startsOfTheWeek
+  }
   
   @IBOutlet weak var weeksTable: UITableView!
   
@@ -41,6 +59,8 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
 
   }
   
+  
+  //*** Sections
   func numberOfSections(in tableView: UITableView) -> Int {
 //    return the number of weeks
     return today.component(.week)!
@@ -48,14 +68,21 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     var headerText = String()
+    weeks = getWeeksForYear()
     if section == 0 {
       headerText = "This Week"
     } else {
-      headerText = "Week \(section)"
+      let begin = weeks[section].toString(format: .custom("MMM d"))
+      let end = weeks[section].dateFor(.endOfWeek).toString(format: .custom("MMM d"))
+      print("\(begin) - \(end)")
+      headerText = "\(begin) - \(end)"
     }
     return headerText
   }
   
+  
+  
+  //**** Rows
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let days = realm.objects(Workday.self)
     var day = Workday()
