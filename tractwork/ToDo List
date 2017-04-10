@@ -7,10 +7,14 @@
 
 √ Create table/collection view for second view
 - why use table over collection?
-- first section shows current week
-- should today show punche pairs ?
+- first section shows current days punches
+- second section shows current week. Limited by days so far.
+- should today show punch pairs?
 - look at fitbit app for design
-- allow to show previous weeks even though there are no hours
+- allow to show previous weeks even though there are no hours - up to beggining of year
+- show date ex. 4/12 for each cell in each section
+- show total time for each day for each cell
+- selecting cell segues to daily view with punches and option to edit/add
 
 
 
