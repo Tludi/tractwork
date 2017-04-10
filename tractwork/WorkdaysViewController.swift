@@ -86,13 +86,19 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let days = realm.objects(Workday.self)
     var day = Workday()
+    var rowCount = Int()
     if days.count != 0 {
       day = days.last!
     }
       print("there are \(days.count) days")
       print("there are \(day.timePunchPairs.count) punches")
     
-    return day.timePunchPairs.count
+    if section == 0 {
+      rowCount = day.timePunchPairs.count
+    } else {
+      rowCount = 7
+    }
+    return rowCount
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -109,8 +115,15 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
 //    cell.textLabel?.text = "hello"
-    cell.textLabel?.text = "\(String(describing: day.timePunchPairs[indexPath.row].firstTimePunch!.punchTime))"
-    cell.detailTextLabel?.text = "\(String(describing: day.timePunchPairs[indexPath.row].secondTimePunch?.punchTime))"
+    if indexPath.section == 0 {
+      let inTime = day.timePunchPairs[indexPath.row].firstTimePunch!.punchTime.toString(format: .custom("hh:mm"))
+      let outTime = day.timePunchPairs[indexPath.row].secondTimePunch?.punchTime.toString(format: .custom("hh:mm"))
+      cell.textLabel?.text = inTime
+      cell.detailTextLabel?.text = outTime
+    } else {
+      cell.textLabel?.text = "No Time"
+      cell.detailTextLabel?.text = ""
+    }
     return cell
   }
 
