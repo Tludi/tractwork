@@ -59,8 +59,10 @@ class DashboardViewController: UIViewController {
     super.viewDidLoad()
     // MARK: -Variables
     let workday = WorkdayController()
-    
+    let workweek = WorkWeekController()
     let today = workday.checkIfTodaysWorkdayExists()
+    
+    workweek.checkIfCurrentWeekExists(date: todaysWorkday.dayDate)
     
     if today.exists {
       todayLabel.text = "Today"

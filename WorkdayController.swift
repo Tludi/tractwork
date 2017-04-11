@@ -12,6 +12,7 @@ import RealmSwift
 class WorkdayController {
   let realm = try! Realm()
   
+
   //***** Crud functions for the controller *****//
   
   func getWorkdays() -> Results<Workday> {

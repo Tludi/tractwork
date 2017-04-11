@@ -14,6 +14,7 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   let realm = try! Realm()
   let today = Date()
   var weeks = [Date]()
+  let weekDaysCount = 7
   
   func getWeeksForYear() -> [Date] {
     let date = Date()
@@ -87,16 +88,19 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
     let days = realm.objects(Workday.self)
     var day = Workday()
     var rowCount = Int()
+    
+    //
     if days.count != 0 {
       day = days.last!
     }
-      print("there are \(days.count) days")
-      print("there are \(day.timePunchPairs.count) punches")
+    
+    print("there are \(days.count) days")
+    print("there are \(day.timePunchPairs.count) punches")
     
     if section == 0 {
       rowCount = day.timePunchPairs.count
     } else {
-      rowCount = 7
+      rowCount = weekDaysCount
     }
     return rowCount
   }
@@ -104,6 +108,7 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let days = realm.objects(Workday.self)
     var day = Workday()
+    let weeks = getWeeksForYear()
     print("there are \(days.count) days")
     if days.count != 0 {
       day = days.last!
@@ -121,8 +126,11 @@ class WorkdaysViewController: UIViewController, UITableViewDelegate, UITableView
       cell.textLabel?.text = inTime
       cell.detailTextLabel?.text = outTime
     } else {
-      cell.textLabel?.text = "No Time"
-      cell.detailTextLabel?.text = ""
+      let firstDayLabel = weeks[indexPath.section].toString(format: .custom("MMM d"))
+      
+      cell.textLabel?.text = firstDayLabel
+      cell.detailTextLabel?.text = "\(indexPath.section)"
+
     }
     return cell
   }

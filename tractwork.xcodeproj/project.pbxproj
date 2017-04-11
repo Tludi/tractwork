@@ -14,6 +14,7 @@
 		00F215E31E8C54BC004E24B8 /* GitBranches in Resources */ = {isa = PBXBuildFile; fileRef = 00F215E21E8C54BC004E24B8 /* GitBranches */; };
 		00F588431E88DAE800527350 /* ToDo List in Resources */ = {isa = PBXBuildFile; fileRef = 00F588421E88DAE800527350 /* ToDo List */; };
 		E1C880C4386BD3E57D4264B2 /* Pods_tractwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */; };
+		EF05F6C21E9C1E65000EFC8E /* WorkWeeksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05F6C11E9C1E65000EFC8E /* WorkWeeksController.swift */; };
 		EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6211E848F0500CA2608 /* AppDelegate.swift */; };
 		EF34B6261E848F0500CA2608 /* WorkdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */; };
 		EF34B6291E848F0500CA2608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF34B6271E848F0500CA2608 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		207BAC4F25C428DC98209FE3 /* Pods_tractwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tractwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9D8DF18D475AB67EE133D0 /* Pods-tractwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tractwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tractwork/Pods-tractwork.debug.xcconfig"; sourceTree = "<group>"; };
 		DE63B58BB29C1F5383554E3F /* Pods-tractwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tractwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-tractwork/Pods-tractwork.release.xcconfig"; sourceTree = "<group>"; };
+		EF05F6C11E9C1E65000EFC8E /* WorkWeeksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkWeeksController.swift; sourceTree = "<group>"; };
 		EF34B61E1E848F0500CA2608 /* tractwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tractwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF34B6211E848F0500CA2608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF34B6251E848F0500CA2608 /* WorkdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkdaysViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				00E68D721E89B924004867CC /* WorkdayController.swift */,
 				00E68D741E89B938004867CC /* TimePunchController.swift */,
+				EF05F6C11E9C1E65000EFC8E /* WorkWeeksController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				EF34B6261E848F0500CA2608 /* WorkdaysViewController.swift in Sources */,
 				00E68D731E89B924004867CC /* WorkdayController.swift in Sources */,
 				EF34B6391E84945100CA2608 /* DateHelper.swift in Sources */,
+				EF05F6C21E9C1E65000EFC8E /* WorkWeeksController.swift in Sources */,
 				EF841A331E8496F1007E93E3 /* Workday.swift in Sources */,
 				00E68D751E89B938004867CC /* TimePunchController.swift in Sources */,
 				EF34B6221E848F0500CA2608 /* AppDelegate.swift in Sources */,
